@@ -31,7 +31,6 @@ bot.variables(require("./variaveis/principal.js"));
 bot.readyCommand({
 
       channel:"id do canal de logs on",
-
       code:`
 to on ze buceta
 `
