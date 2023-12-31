@@ -11,7 +11,7 @@ const client = new AoiClient({
     db: require("@akarui/aoi.db"),
     dbType: "KeyValue",
     tables: ["main"],
-    securityKey: "69699678969696969690123456786906",
+    securityKey: "00000000000000000000000006969696",
   },
 });
 
