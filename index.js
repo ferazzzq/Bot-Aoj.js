@@ -1,28 +1,17 @@
-const express = require('express')
-const app = express();
-app.get("/", (request, response) => {
-  const ping = new Date();
-  ping.setHours(ping.getHours() - 3);
-  console.log(`Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-
 const { AoiClient, LoadCommands, Util } = require("aoi.js");
 const { parse, createAst } = require('@akarui/aoi.parser');
 const { parseExtraOptions } = require('@akarui/aoi.parser/components');
 const client = new AoiClient({
-  token: "SEU_ToKeN",
-  prefix: "SEU_ToKeN",
+  token: "TOKENAQUI",
+  prefix: ["prefixo1" ,"prefixo2"],
   intents: ["MessageContent", "Guilds", "GuildMessages"],
   events: ["onMessage", "onInteractionCreate"],
-  disableAoiDB: true,
   database: {
     type: "aoi.db",
-      db: require("@akarui/aoi.db"),
-      dbType: "KeyValue",
-      tables: ["main"],
-      securityKey: "uma key com 32 caracteres.",
+    db: require("@akarui/aoi.db"),
+    dbType: "KeyValue",
+    tables: ["main"],
+    securityKey: "69699678969696969690123456786906",
   },
 });
 
@@ -35,7 +24,7 @@ process.on('uncaughtException', (error, origin) => {
 });
 
 client.status({
-  name: "bot focused on global economy.",
+  name: "mensagem do status",
   type: "PLAYING",
   time: 12,
 });
